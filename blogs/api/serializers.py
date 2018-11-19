@@ -11,7 +11,7 @@ class ListBlogSerializer(serializers.ModelSerializer):
     '''
     class Meta:
         model = Blog
-        exclude = ('section',)
+        fields = ['id', 'title', 'description', 'checkmark']
 
 
 class UpdateBlogSerializer(serializers.ModelSerializer):

@@ -2,49 +2,57 @@
 
 DATA = [
         {
-            "section" : 1,
+            "section_id" : 1,
+            "section_name": "section1",
             "title" : "Heading",
             "description" : "Lorem lipsum dolor sit amet, Consectetuer adipiscing elit, sed diam nonummy nibh...",
             "checkmark" : False
         },
         {
-            "section" : 1,
+            "section_id" : 1,
+            "section_name": "section1",
             "title" : "Heading",
             "description" : "Lorem lipsum dolor sit amet, Consectetuer adipiscing elit, sed diam nonummy nibh...",
             "checkmark" : False
         },
         {
-            "section" : 1,
+            "section_id" : 1,
+            "section_name": "section1",
             "title" : "Heading",
             "description" : "Lorem lipsum dolor sit amet, Consectetuer adipiscing elit, sed diam nonummy nibh...",
             "checkmark" : False
         },
         {
-            "section" : 1,
+            "section_id" : 1,
+            "section_name": "section1",
             "title" : "Heading",
             "description" : "Lorem lipsum dolor sit amet, Consectetuer adipiscing elit, sed diam nonummy nibh...",
             "checkmark" : False
         },
         {
-            "section" : 2,
+            "section_id" : 2,
+            "section_name": "section1",
             "title" : "Heading",
             "description" : "Lorem lipsum dolor sit amet, Consectetuer adipiscing elit, sed diam nonummy nibh...",
             "checkmark" : False
         },
         {
-            "section" : 2,
+            "section_id" : 2,
+            "section_name": "section1",
             "title" : "Heading",
             "description" : "Lorem lipsum dolor sit amet, Consectetuer adipiscing elit, sed diam nonummy nibh...",
             "checkmark" : False
         },
         {
-            "section" : 2,
+            "section_id" : 2,
+            "section_name": "section1",
             "title" : "Heading",
             "description" : "Lorem lipsum dolor sit amet, Consectetuer adipiscing elit, sed diam nonummy nibh...",
             "checkmark" : False
         },
         {
-            "section" : 2,
+            "section_id" : 2,
+            "section_name": "section1",
             "title" : "Heading",
             "description" : "Lorem lipsum dolor sit amet, Consectetuer adipiscing elit, sed diam nonummy nibh...",
             "checkmark" : False

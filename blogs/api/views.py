@@ -16,14 +16,23 @@ class ListBlogView(APIView):
         Api to list blogs
     '''
     def get(self, request, format=None):
-
-        blogs = {}
-        sections = Blog.objects.all().values_list('section', flat=True).distinct()
+        
+        section_blog_list = []
+        sections = Blog.objects.all().values_list('section_id', flat=True).distinct()
         for section in sections:
-            blog = Blog.objects.filter(section=section)
-            blogs[section] = ListBlogSerializer(blog, many=True).data
+            blog = Blog.objects.filter(section_id=section)
+            section_list = {
+                "section_id": section,
+                "section_name": blog[0].section_name,
+                "blog_list": ListBlogSerializer(blog, many=True).data
+            }
+            section_blog_list.append(section_list)
 
-        return Response(blogs)
+        section_blog = {
+            "section_and_blog_list": section_blog_list
+        }
+
+        return Response(section_blog)
 
 
 class UpdateBlogView(APIView):
