@@ -140,12 +140,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _header_header_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./header/header.component */ "./src/app/header/header.component.ts");
 /* harmony import */ var _footer_footer_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./footer/footer.component */ "./src/app/footer/footer.component.ts");
 /* harmony import */ var _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./dashboard/dashboard.component */ "./src/app/dashboard/dashboard.component.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -166,7 +168,8 @@ var AppModule = /** @class */ (function () {
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_2__["AppRoutingModule"]
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_2__["AppRoutingModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClientModule"],
             ],
             providers: [],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]
@@ -175,42 +178,6 @@ var AppModule = /** @class */ (function () {
     return AppModule;
 }());
 
-
-
-/***/ }),
-
-/***/ "./src/app/constants/constants.ts":
-/*!****************************************!*\
-  !*** ./src/app/constants/constants.ts ***!
-  \****************************************/
-/*! exports provided: CONSTANTS */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CONSTANTS", function() { return CONSTANTS; });
-var CONSTANTS = {
-    READINGCONTENT: [
-        {
-            heading: 'READING',
-            info: "Lorem lipsum dolor sit amet,\n          Consectetuer adipiscing elit, sed diam nonummy nibh..."
-        },
-        {
-            heading: 'READING',
-            info: "Lorem lipsum dolor sit amet,\n          Consectetuer adipiscing elit, sed diam nonummy nibh..."
-        }
-    ],
-    QUESTIONSCONTENT: [
-        {
-            heading: 'QUESTIONS',
-            info: "Lorem lipsum dolor sit amet,\n            Consectetuer adipiscing elit, sed diam nonummy nibh..."
-        },
-        {
-            heading: 'QUESTIONS',
-            info: "Lorem lipsum dolor sit amet,\n            Consectetuer adipiscing elit, sed diam nonummy nibh..."
-        }
-    ]
-};
 
 
 /***/ }),
@@ -233,7 +200,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"hero\">\n  <div class=\"container\">\n    <p class=\"jump\"><i class=\"fas fa-arrow-left\"></i> Jump to where you left off: <a href=\"#\">Heading Goes Here</a></p>\n    <h1>The Interview Cake Course</h1>\n    <div class=\"well-text\">\n      <div class=\"sep\"></div>\n      <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking\n        at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as\n        opposed to using 'Content here, content here', making it look like readable English. </p>\n      <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a\n        search for 'Iorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over\n        the years, sometimes by accident, sometimes on purpose (injected humour and the like).\n      </p>\n      <p>\n        <label class=\"container-check\">Give me exercises and content in:\n          <input type=\"checkbox\">\n          <span class=\"checkmark\"></span>\n        </label>\n    </div>\n  </div>\n</div>\n\n<div class=\"grey-bg communpadding\">\n  <div class=\"container\">\n    <div class=\"info-head\">section: 1</div>\n    <div class=\"row\">\n      <div class=\"col-8 col-sm-6\">\n        <h2>General topic</h2>\n      </div>\n      <div class=\"col-4 col-sm-6 pull-right\">\n        <button class=\"btn theme-btn\"><i class=\"fas fa-arrow-up\"></i> Show Less</button>\n      </div>\n    </div>\n    <hr class=\"hr\">\n    <div class=\"card-wrap\">\n      <div class=\"info-head\">READING:</div>\n      <div class=\"row gutter-space25\">\n        <div class=\"col-sm-6\" *ngFor=\"let content of readingContent\">\n          <div class=\"card\">\n            <span class=\"card-status\"><i class=\"fas fa-check-circle\"></i></span>\n            <div class=\"card-header\">\n              <h5>Heading</h5>\n              <div class=\"tools\"><a href=\"#\"><i class=\"fas fa-clipboard-list\"></i></a> <a href=\"#\"><i class=\"fas fa-thumbtack\"></i></a></div>\n            </div>\n            <div class=\"card-body\">\n             {{content.info}}\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class=\"card-wrap\">\n      <div class=\"info-head\">QUESTIONS:</div>\n        <div class=\"row gutter-space25\">\n          <div class=\"col-sm-6\" *ngFor=\"let content of questionsContent\">\n            <div class=\"card\">\n              <span class=\"card-status\"><i class=\"fas fa-check-circle\"></i></span>\n              <div class=\"card-header\">\n                <h5>Heading</h5>\n                <div class=\"tools\"><a href=\"#\"><i class=\"fas fa-clipboard-list\"></i></a> <a href=\"#\"><i class=\"fas fa-thumbtack\"></i></a></div>\n              </div>\n              <div class=\"card-body\">\n               {{content.info}}\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n</div>\n<div class=\"communpadding card-wrap-grey\">\n    <div class=\"container\">\n      <div class=\"info-head\">section: 1</div>\n      <div class=\"row\">\n        <div class=\"col-8 col-sm-6\">\n          <h2>General topic</h2>\n        </div>\n        <div class=\"col-4 col-sm-6 pull-right\">\n          <button class=\"btn theme-btn\"><i class=\"fas fa-arrow-up\"></i> Show Less</button>\n        </div>\n      </div>\n      <hr class=\"hr\">\n      <div class=\"card-wrap\">\n        <div class=\"info-head\">READING:</div>\n        <div class=\"row gutter-space25\">\n          <div class=\"col-sm-6\" *ngFor=\"let content of readingContent\">\n            <div class=\"card\">\n              <span class=\"card-status\"><i class=\"fas fa-check-circle\"></i></span>\n              <div class=\"card-header\">\n                <h5>Heading</h5>\n                <div class=\"tools\"><a href=\"#\"><i class=\"fas fa-clipboard-list\"></i></a> <a href=\"#\"><i class=\"fas fa-thumbtack\"></i></a></div>\n              </div>\n              <div class=\"card-body\">\n               {{content.info}}\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n      <div class=\"card-wrap\">\n        <div class=\"info-head\">QUESTIONS:</div>\n          <div class=\"row gutter-space25\">\n            <div class=\"col-sm-6\" *ngFor=\"let content of questionsContent\">\n              <div class=\"card\">\n                <span class=\"card-status\"><i class=\"fas fa-check-circle\"></i></span>\n                <div class=\"card-header\">\n                  <h5>Heading</h5>\n                  <div class=\"tools\"><a href=\"#\"><i class=\"fas fa-clipboard-list\"></i></a> <a href=\"#\"><i class=\"fas fa-thumbtack\"></i></a></div>\n                </div>\n                <div class=\"card-body\">\n                 {{content.info}}\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n  </div>"
+module.exports = "<div id=\"hero\">\n  <div class=\"container\">\n    <p class=\"jump\"><i class=\"fas fa-arrow-left\"></i> Jump to where you left off: <a href=\"#\">Heading Goes Here</a></p>\n    <h1>The Interview Cake Course</h1>\n    <div class=\"well-text\">\n      <div class=\"sep\"></div>\n      <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking\n        at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as\n        opposed to using 'Content here, content here', making it look like readable English. </p>\n      <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a\n        search for 'Iorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over\n        the years, sometimes by accident, sometimes on purpose (injected humour and the like).\n      </p>\n      <p>\n        <label class=\"container-check\">Give me exercises and content in:\n          <input type=\"checkbox\">\n          <span class=\"checkmark\"></span>\n        </label>\n    </div>\n  </div>\n</div>\n<div class=\"communpadding\" *ngFor=\"let section of sectionAndBlogList['section_and_blog_list']; let sectionIndex = index;\" [ngClass]=\"sectionIndex % 2 === 0 ? 'grey-bg' : ''\">\n  <div class=\"container\">\n    <div class=\"info-head\">{{section.section_name}}</div>\n    <div class=\"row\">\n      <div class=\"col-8 col-sm-6\">\n        <h2>{{section.topic_name}}</h2>\n      </div>\n      <div class=\"col-4 col-sm-6 pull-right\">\n        <button class=\"btn theme-btn\"><i class=\"fas fa-arrow-up\"></i> Show Less</button>\n      </div>\n    </div>\n    <hr class=\"hr\">\n    <div class=\"card-wrap\" *ngFor=\"let blogCategory of section['blog_list']\">\n      <div class=\"info-head\">{{blogCategory.blog_category_name}}</div>\n      <div class=\"row gutter-space25\">\n        <div class=\"col-sm-6\" *ngFor=\"let blog of blogCategory['blogs']\">\n          <div class=\"card\">\n            <span class=\"card-status\" [ngClass]=\"blog.checkmark? 'active' : ''\" (click)=\"updateBlog(blog.id, blog.checkmark)\"><i class=\"fas fa-check-circle\"></i><input type=\"checkbox\"></span>\n            <div class=\"card-header\">\n              <h5>{{blog.title}}</h5>\n              <div class=\"tools\"><a href=\"#\"><i class=\"fas fa-clipboard-list\"></i></a> <a href=\"#\"><i class=\"fas fa-thumbtack\"></i></a></div>\n            </div>\n            <div class=\"card-body\">\n              {{blog.description}}\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n<!-- <div class=\"grey-bg communpadding\">\n  <div class=\"container\">\n    <div class=\"info-head\">section: 1</div>\n    <div class=\"row\">\n      <div class=\"col-8 col-sm-6\">\n        <h2>General topic</h2>\n      </div>\n      <div class=\"col-4 col-sm-6 pull-right\">\n        <button class=\"btn theme-btn\"><i class=\"fas fa-arrow-up\"></i> Show Less</button>\n      </div>\n    </div>\n    <hr class=\"hr\">\n    <div class=\"card-wrap\">\n      <div class=\"info-head\">READING:</div>\n      <div class=\"row gutter-space25\">\n        <div class=\"col-sm-6\" *ngFor=\"let content of readingContent\">\n          <div class=\"card\">\n            <span class=\"card-status\"><i class=\"fas fa-check-circle\"></i></span>\n            <div class=\"card-header\">\n              <h5>Heading</h5>\n              <div class=\"tools\"><a href=\"#\"><i class=\"fas fa-clipboard-list\"></i></a> <a href=\"#\"><i class=\"fas fa-thumbtack\"></i></a></div>\n            </div>\n            <div class=\"card-body\">\n             {{content.info}}\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class=\"card-wrap\">\n      <div class=\"info-head\">QUESTIONS:</div>\n      <div class=\"row gutter-space25\">\n        <div class=\"col-sm-6\" *ngFor=\"let content of questionsContent\">\n          <div class=\"card\">\n            <span class=\"card-status\"><i class=\"fas fa-check-circle\"></i></span>\n            <div class=\"card-header\">\n              <h5>Heading</h5>\n              <div class=\"tools\"><a href=\"#\"><i class=\"fas fa-clipboard-list\"></i></a> <a href=\"#\"><i class=\"fas fa-thumbtack\"></i></a></div>\n            </div>\n            <div class=\"card-body\">\n              {{content.info}}\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n<div class=\"communpadding card-wrap-grey\">\n  <div class=\"container\">\n    <div class=\"info-head\">section: 1</div>\n    <div class=\"row\">\n      <div class=\"col-8 col-sm-6\">\n        <h2>General topic</h2>\n      </div>\n      <div class=\"col-4 col-sm-6 pull-right\">\n        <button class=\"btn theme-btn\"><i class=\"fas fa-arrow-up\"></i> Show Less</button>\n      </div>\n    </div>\n    <hr class=\"hr\">\n    <div class=\"card-wrap\">\n      <div class=\"info-head\">READING:</div>\n      <div class=\"row gutter-space25\">\n        <div class=\"col-sm-6\" *ngFor=\"let content of readingContent\">\n          <div class=\"card\">\n            <span class=\"card-status\"><i class=\"fas fa-check-circle\"></i></span>\n            <div class=\"card-header\">\n              <h5>Heading</h5>\n              <div class=\"tools\"><a href=\"#\"><i class=\"fas fa-clipboard-list\"></i></a> <a href=\"#\"><i class=\"fas fa-thumbtack\"></i></a></div>\n            </div>\n            <div class=\"card-body\">\n              {{content.info}}\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class=\"card-wrap\">\n      <div class=\"info-head\">QUESTIONS:</div>\n        <div class=\"row gutter-space25\">\n          <div class=\"col-sm-6\" *ngFor=\"let content of questionsContent\">\n            <div class=\"card\">\n              <span class=\"card-status\"><i class=\"fas fa-check-circle\"></i></span>\n              <div class=\"card-header\">\n                <h5>Heading</h5>\n                <div class=\"tools\"><a href=\"#\"><i class=\"fas fa-clipboard-list\"></i></a> <a href=\"#\"><i class=\"fas fa-thumbtack\"></i></a></div>\n              </div>\n              <div class=\"card-body\">\n                {{content.info}}\n              </div>\n            </div>\n          </div>\n        </div>\n    </div>\n  </div>\n</div> -->"
 
 /***/ }),
 
@@ -247,7 +214,7 @@ module.exports = "<div id=\"hero\">\n  <div class=\"container\">\n    <p class=\
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DashboardComponent", function() { return DashboardComponent; });
-/* harmony import */ var _constants_constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../constants/constants */ "./src/app/constants/constants.ts");
+/* harmony import */ var _service_api_service_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../service/api-service.service */ "./src/app/service/api-service.service.ts");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -261,11 +228,30 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 var DashboardComponent = /** @class */ (function () {
-    function DashboardComponent() {
-        this.readingContent = _constants_constants__WEBPACK_IMPORTED_MODULE_0__["CONSTANTS"].READINGCONTENT;
-        this.questionsContent = _constants_constants__WEBPACK_IMPORTED_MODULE_0__["CONSTANTS"].QUESTIONSCONTENT;
+    function DashboardComponent(apiService) {
+        this.apiService = apiService;
+        /* readingContent: any = CONSTANTS.READINGCONTENT
+        questionsContent: any = CONSTANTS.QUESTIONSCONTENT */
+        this.sectionAndBlogList = {};
+        this.getBlogList();
     }
     DashboardComponent.prototype.ngOnInit = function () {
+    };
+    DashboardComponent.prototype.getBlogList = function () {
+        var _this = this;
+        this.apiService.getBlogList().subscribe(function (result) {
+            _this.sectionAndBlogList = result;
+        }, function (error) {
+            console.log("error in get blog list api", error);
+        });
+    };
+    DashboardComponent.prototype.updateBlog = function (id, checkmark) {
+        var _this = this;
+        this.apiService.updateBlog(id, !checkmark).subscribe(function (result) {
+            _this.getBlogList();
+        }, function (error) {
+            console.log("error in update blog", error);
+        });
     };
     DashboardComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -273,7 +259,7 @@ var DashboardComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./dashboard.component.html */ "./src/app/dashboard/dashboard.component.html"),
             styles: [__webpack_require__(/*! ./dashboard.component.css */ "./src/app/dashboard/dashboard.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_service_api_service_service__WEBPACK_IMPORTED_MODULE_0__["ApiServiceService"]])
     ], DashboardComponent);
     return DashboardComponent;
 }());
@@ -408,6 +394,55 @@ var HeaderComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/service/api-service.service.ts":
+/*!************************************************!*\
+  !*** ./src/app/service/api-service.service.ts ***!
+  \************************************************/
+/*! exports provided: ApiServiceService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ApiServiceService", function() { return ApiServiceService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var ApiServiceService = /** @class */ (function () {
+    function ApiServiceService(http) {
+        this.http = http;
+        this.baseUrl = 'https://testtask12.herokuapp.com/';
+    }
+    ApiServiceService.prototype.getBlogList = function () {
+        return this.http.get(this.baseUrl + 'blogs/list');
+    };
+    ApiServiceService.prototype.updateBlog = function (blogId, checkMark) {
+        return this.http.put(this.baseUrl + 'blogs/update/' + blogId, {
+            checkmark: checkMark
+        });
+    };
+    ApiServiceService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+    ], ApiServiceService);
+    return ApiServiceService;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/environments/environment.ts":
 /*!*****************************************!*\
   !*** ./src/environments/environment.ts ***!
@@ -469,7 +504,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/ubox58/Sparsh/poc/test-task-frontend/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /home/ujjawalsolanki/sandbox/test-task-frontend/src/main.ts */"./src/main.ts");
 
 
 /***/ })
