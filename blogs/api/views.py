@@ -20,7 +20,7 @@ class ListBlogView(APIView):
         section_blog_list = []
         sections = Blog.objects.all().values_list('section_id', flat=True).distinct()
         for section in sections:
-            blogs = Blog.objects.filter(section_id=section)
+            blogs = Blog.objects.filter(section_id=section).order_by('id')
             section_list = {
                 "section_id": section,
                 "section_name": blogs[0].section_name,
@@ -28,8 +28,8 @@ class ListBlogView(APIView):
                 "blog_list": []
             }
             
-            reading_blogs = blogs.filter(blog_category_name='reading')
-            questions_blogs = blogs.filter(blog_category_name='questions')
+            reading_blogs = blogs.filter(blog_category_name='reading').order_by('id')
+            questions_blogs = blogs.filter(blog_category_name='questions').order_by('id')
 
             blog_list = [
                 {
