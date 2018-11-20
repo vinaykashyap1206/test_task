@@ -20,12 +20,29 @@ class ListBlogView(APIView):
         section_blog_list = []
         sections = Blog.objects.all().values_list('section_id', flat=True).distinct()
         for section in sections:
-            blog = Blog.objects.filter(section_id=section)
+            blogs = Blog.objects.filter(section_id=section)
             section_list = {
                 "section_id": section,
-                "section_name": blog[0].section_name,
-                "blog_list": ListBlogSerializer(blog, many=True).data
+                "section_name": blogs[0].section_name,
+                "topic_name": blogs[0].topic_name,
+                "blog_list": []
             }
+            
+            reading_blogs = blogs.filter(blog_category_name='reading')
+            questions_blogs = blogs.filter(blog_category_name='questions')
+
+            blog_list = [
+                {
+                    "blog_category_name": "reading",
+                    "blogs": ListBlogSerializer(reading_blogs, many=True).data
+                },
+                {   
+                    "blog_category_name": "questions",
+                    "blogs": ListBlogSerializer(questions_blogs, many=True).data
+                }
+            ]
+            section_list['blog_list'] = blog_list
+
             section_blog_list.append(section_list)
 
         section_blog = {

@@ -13,3 +13,5 @@ class Blog(models.Model):
     title = models.CharField(max_length=225)
     description = models.CharField(max_length=1024)
     checkmark = models.BooleanField(default=False)
+    topic_name = models.CharField(max_length=225, null=True, blank=True)
+    blog_category_name = models.CharField(max_length=225, null=True, blank=True)
